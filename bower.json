@@ -1,0 +1,17 @@
+{
+  "name": "peepchat",
+  "description": "Small description for peepchat goes here",
+  "main": "",
+  "authors": [
+    "Louis Proulx <proulx.louis@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
