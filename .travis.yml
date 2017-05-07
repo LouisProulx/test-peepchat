@@ -1,21 +1,22 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 before_install:
-  - npm config set spin false
-  - npm install -g phantomjs-prebuilt
-  - phantomjs --version
-
+- npm config set spin false
+- npm install -g phantomjs-prebuilt
+- phantomjs --version
 install:
-  - npm install
-
+- npm install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: 2IgauDbj8CHWAU0h4h/4Lxncalol/t6YyU+OZv3Im3rm5NZgbQOpxtu+xg2ktfeeWe3qbyru6EnIfdBzSXAAHJOqjk0GR6JXaG0RfhcU4MvI29UmO0tB5MxTgh91oGR/QsNAZQpHOjKuagL9ukwlClklTK6gzXTqnZqkqrHTTLfMmaGidzdBz94qV250cqJCaCjxwnaSuuDLhOaGf0U1CkAlhgGoYU5t8S9Vlqq0N1aeOfVptYJ1i8d1CzuibcZArUQ+DwQcEDC1Bs7z0k9hovsZP8UyGkkSlp74vX7i0ocwHPYIL2LRKtg0EWZvFyPnJepioZrL9DFP0whvRXFo54Cfb6XP0h+FJu9/Csu747MbSSVY6KQxvzSeD3IMQhFe80ePhhIr2FsJeS9vIWcM2JXeVnmrHPQRt64WQ+ziiXhReBoXj0jav90lt9zBGtvnWVdOczv6IMlMLQbBJfi2+0ldZjmpmenj5g211V3Ze3vKwk5J2ksDVZ3Ap16zD8L642h+DC/3rL0elVWMOb0n2bj9BihURatV1VJolZ8tMy97R9vu5z6refPxNVcKomzW9b6hmv1ZrQ9wlvBYBGwQvZES0tRasBUVjvB0d4dO91R51g6mSac6SMWNXwf3cuB+DNpIzer82YO3zTKqRO/trS9flIcMAQKwaDP93f4a5Z4=
+  app: arcane-beach-58525
+  on:
+    repo: LouisProulx/test-peepchat
