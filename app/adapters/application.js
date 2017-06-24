@@ -6,7 +6,7 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
 
   host: config.DS.host,
   namespace: config.DS.namespace,
-  authorizers: 'authorizers.oauth2',
+  authorizer: 'authorizer:oauth2',
 
   urlForCreateRecord(modelName/*, snapshot*/) {
     switch(modelName) {
