@@ -25,3 +25,4 @@ export const passwordConfirmation = [
 export default {
   email, password, passwordConfirmation
 };
+  
