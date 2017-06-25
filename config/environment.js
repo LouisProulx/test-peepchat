@@ -32,6 +32,10 @@ module.exports = function(environment) {
       },
     fastboot: {
       hostWhitelist: [/^localhost:\d+$/]
+    },
+    flashMessageDefaults: {
+      timeout: 3000,
+      extendedTimeout: 375
     }
   };
 
